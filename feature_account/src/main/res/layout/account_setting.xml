@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/backgroud_header"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/moreicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            app:layout_constraintBottom_toBottomOf="@+id/backicon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/backicon" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account setting"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/moreicon"
+            app:layout_constraintEnd_toStartOf="@+id/moreicon"
+            app:layout_constraintStart_toEndOf="@+id/backicon"
+            app:layout_constraintTop_toTopOf="@+id/moreicon" />
+
+
+        <TextView
+            android:id="@+id/profile_image"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/avatar"
+            android:layout_marginStart="20dp"
+            android:text="RN"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="\@Rafael Nadal Parera"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+            app:layout_constraintStart_toEndOf="@+id/profile_image"
+            app:layout_constraintTop_toTopOf="@+id/profile_image" />
+
+
+        <ImageView
+            android:id="@+id/editicon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_mode_24"
+            app:layout_constraintBottom_toBottomOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.23"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:text="Main setting"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline_1" />
+
+    <RelativeLayout
+        android:id="@+id/rlNotifications"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background_icon"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_notifications_none_24" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvNofication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Nofications"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/rlNotifications"
+        app:layout_constraintStart_toEndOf="@+id/rlNotifications"
+        app:layout_constraintTop_toTopOf="@+id/rlNotifications" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/noficaiotns_next"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_navigate_next_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/rlNotifications"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/rlNotifications" />-->
+
+
+    <RelativeLayout
+        android:id="@+id/rlSecurity"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/background_icon"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/rlNotifications">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_security_24" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvSecurity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Security"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/rlSecurity"
+        app:layout_constraintStart_toEndOf="@+id/rlSecurity"
+        app:layout_constraintTop_toTopOf="@+id/rlSecurity" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/Security_next"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_navigate_next_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/rlSecurity"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/rlSecurity" />-->
+
+    <RelativeLayout
+        android:id="@+id/rlPrivacy"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/background_icon"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/rlSecurity">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_privacy_tip_24" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvPrivacy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Privay"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/rlPrivacy"
+        app:layout_constraintStart_toEndOf="@+id/rlPrivacy"
+        app:layout_constraintTop_toTopOf="@+id/rlPrivacy" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/Privacy_next"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_navigate_next_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/rlPrivacy"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/rlPrivacy" />-->
+
+    <RelativeLayout
+        android:id="@+id/rlBuget"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_icon"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/rlPrivacy">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_attach_money_24"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvBuget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Budget Limit"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/rlBuget"
+        app:layout_constraintStart_toEndOf="@+id/rlBuget"
+        app:layout_constraintTop_toTopOf="@+id/rlBuget" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/Buget_next"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_navigate_next_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/rlBuget"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/rlBuget" />-->
+
+
+    <TextView
+        android:id="@+id/tvTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Theme"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/rlBuget" />
+
+
+    <RelativeLayout
+        android:id="@+id/DarkTheme"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background_icon"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/tvTheme">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_dark_mode_24"/>
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvDarkTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Dark theme"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/DarkTheme"
+        app:layout_constraintStart_toEndOf="@+id/DarkTheme"
+        app:layout_constraintTop_toTopOf="@+id/DarkTheme" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/DarkTheme_next"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_navigate_next_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/DarkTheme"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/DarkTheme" />-->
+
+
+    <RelativeLayout
+        android:id="@+id/Color"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_icon"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/DarkTheme">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_invert_colors_24" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Color"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/Color"
+        app:layout_constraintStart_toEndOf="@+id/Color"
+        app:layout_constraintTop_toTopOf="@+id/Color" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/Color_next"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_navigate_next_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/Color"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/Color" />-->
+
+
+    <TextView
+        android:id="@+id/tvOther"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/Color" />
+
+
+    <RelativeLayout
+        android:id="@+id/OutApp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_icon"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/AboutUs">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_logout_24" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="Log out"
+        android:textColor="#D70606"
+        app:layout_constraintBottom_toBottomOf="@+id/OutApp"
+        app:layout_constraintStart_toEndOf="@+id/OutApp"
+        app:layout_constraintTop_toTopOf="@+id/OutApp" />
+
+
+    <RelativeLayout
+        android:id="@+id/AboutUs"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/background_icon"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/tvOther">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_invert_colors_24" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvAboutUs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="About us"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/AboutUs"
+        app:layout_constraintStart_toEndOf="@+id/AboutUs"
+        app:layout_constraintTop_toTopOf="@+id/AboutUs" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/out_next"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_navigate_next_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/OutApp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/OutApp" />-->
+<!--    <TextView-->
+<!--        android:id="@+id/textView3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="Change mobile number"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/textView2"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView2" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView4"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="Nofication"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/textView3"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView3" />-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/tvhelp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="Help"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="16sp"-->
+<!--        android:textStyle="bold"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/textView4"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView4" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_photo_camera_back_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/textView2"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_4"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textView2" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_phone_enabled_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/textView3"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_4"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textView3" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_notifications_none_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/textView4"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_4"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/textView4" />-->
+
+
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_baseline_live_help_24"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/tvhelp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/guideline_4"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/tvhelp" />-->
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

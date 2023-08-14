@@ -51,4 +51,5 @@ kotlin {
 
 dependencies {
     api(projects.base)
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 }
